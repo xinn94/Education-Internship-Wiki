@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff9f2">
+  <title>第一次申請教育實習：新手準備指南</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #fff9f2;
+      --orange: #e99a62;
+      --yellow: #f6d98b;
+      --green: #a8c9ae;
+      --ink: #574638;
+      --muted: #827569;
+      --white: #fff;
+      --line: #eadfd2;
+      --shadow: 0 18px 48px rgba(87, 70, 56, .10);
+      font-family: "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: var(--paper); }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 12%, rgba(246, 217, 139, .25), transparent 22rem),
+        radial-gradient(circle at 92% 78%, rgba(168, 201, 174, .22), transparent 25rem),
+        var(--paper);
+    }
+
+    button { font: inherit; }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 1rem clamp(1rem, 4vw, 2.5rem) .5rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+      font-size: .9rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 2rem;
+      height: 2rem;
+      place-items: center;
+      border-radius: 10px 10px 10px 3px;
+      color: var(--white);
+      background: var(--orange);
+      box-shadow: 0 5px 12px rgba(233, 154, 98, .28);
+    }
+
+    .top-note {
+      color: var(--muted);
+      font-size: .78rem;
+      text-align: right;
+    }
+
+    #stage {
+      min-height: calc(100vh - 118px);
+      padding: .5rem clamp(1rem, 4vw, 2.5rem) 1rem;
+    }
+
+    .slide {
+      display: none;
+      grid-template-rows: auto 1fr auto;
+      gap: 1.15rem;
+      width: min(100%, 1120px);
+      min-height: calc(100vh - 142px);
+      margin: 0 auto;
+      padding: clamp(1.25rem, 3.2vw, 2.5rem);
+      overflow: hidden;
+      border: 1px solid rgba(234, 223, 210, .9);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .76);
+      box-shadow: var(--shadow);
+      animation: arrive .28s ease-out;
+    }
+
+    .slide.is-active { display: grid; }
+
+    @keyframes arrive {
+      from { opacity: .55; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 .45rem;
+      color: #a76537;
+      font-size: .75rem;
+      font-weight: 850;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2 {
+      margin-bottom: 0;
+      line-height: 1.16;
+      letter-spacing: -.035em;
+    }
+
+    h1 { font-size: clamp(2.35rem, 6vw, 5rem); }
+    h2 { font-size: clamp(1.8rem, 4vw, 3.15rem); }
+    h3 { margin-bottom: .45rem; font-size: 1.08rem; }
+
+    p { line-height: 1.65; }
+
+    .step {
+      display: inline-grid;
+      flex: 0 0 auto;
+      width: 2.7rem;
+      height: 2.7rem;
+      place-items: center;
+      border: 1px solid rgba(233, 154, 98, .35);
+      border-radius: 50%;
+      color: #9c5e34;
+      background: #fff3e7;
+      font-size: .85rem;
+      font-weight: 850;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.15rem;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.65vw, 1.25rem);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card {
+      padding: 1.15rem;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--white);
+    }
+
+    .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+
+    .card-kicker {
+      display: inline-block;
+      margin-bottom: .75rem;
+      padding: .28rem .62rem;
+      border-radius: 999px;
+      color: #765635;
+      background: #fbefcd;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    .card-kicker.green { background: #e7f1e8; color: #4a7051; }
+    .card-kicker.orange { background: #fff0e4; color: #995d32; }
+
+    .card p, .card li { font-size: .94rem; }
+
+    .card ul, .plain-list {
+      display: grid;
+      gap: .48rem;
+      margin: .5rem 0 0;
+      padding-left: 1.2rem;
+      line-height: 1.55;
+    }
+
+    .callout {
+      display: flex;
+      align-items: flex-start;
+      gap: .8rem;
+      padding: 1rem 1.15rem;
+      border-left: 4px solid var(--orange);
+      border-radius: 12px;
+      background: #fff4e9;
+      line-height: 1.6;
+    }
+
+    .callout.green {
+      border-left-color: #79a984;
+      background: #eef5ee;
+    }
+
+    .callout.yellow {
+      border-left-color: #ddb747;
+      background: #fff8df;
+    }
+
+    .callout p { margin: 0; }
+
+    .source {
+      margin: 0;
+      padding-top: .75rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .75rem;
+      line-height: 1.5;
+    }
+
+    .source strong { color: #755e49; }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      margin: .08rem .18rem .08rem 0;
+      padding: .28rem .58rem;
+      border-radius: 999px;
+      color: #574638;
+      background: #f5eee5;
+      font-size: .72rem;
+      font-weight: 780;
+      white-space: nowrap;
+    }
+
+    .label.experience { background: #e7f1e8; color: #41684a; }
+    .label.inquiry { background: #fff0e4; color: #925b35; }
+    .label.extension { background: #f1eaf8; color: #674d83; }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: .65rem;
+      align-items: stretch;
+    }
+
+    .flow-item {
+      position: relative;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--white);
+    }
+
+    .flow-item:not(:last-child)::after {
+      position: absolute;
+      top: 50%;
+      right: -.62rem;
+      z-index: 1;
+      width: 1.1rem;
+      height: 1.1rem;
+      content: "›";
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--orange);
+      font-weight: 900;
+      transform: translateY(-50%);
+    }
+
+    .flow-item b {
+      display: block;
+      margin-bottom: .35rem;
+      color: #965d35;
+      font-size: .8rem;
+    }
+
+    .flow-item span { font-size: .88rem; line-height: 1.45; }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .quote {
+      padding: 1.2rem;
+      border-radius: 18px;
+      background: #fff7e2;
+      font-size: clamp(1.05rem, 2vw, 1.45rem);
+      font-weight: 750;
+      line-height: 1.5;
+    }
+
+    .quote small {
+      display: block;
+      margin-top: .8rem;
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 600;
+    }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .65rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: .65rem;
+      padding: .78rem .85rem;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--white);
+      font-size: .9rem;
+      line-height: 1.45;
+    }
+
+    .check {
+      display: grid;
+      flex: 0 0 auto;
+      width: 1.35rem;
+      height: 1.35rem;
+      place-items: center;
+      border: 1.5px solid #8eaa91;
+      border-radius: 5px;
+      color: #52775a;
+      font-size: .8rem;
+      font-weight: 900;
+    }
+
+    .cover {
+      position: relative;
+      align-items: center;
+      min-height: 100%;
+    }
+
+    .cover::after {
+      position: absolute;
+      right: 3%;
+      bottom: 8%;
+      width: clamp(130px, 23vw, 250px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(233, 154, 98, .22);
+      border-radius: 48% 52% 58% 42%;
+      content: "";
+      background:
+        radial-gradient(circle at 30% 34%, rgba(246, 217, 139, .8) 0 13%, transparent 13.5%),
+        radial-gradient(circle at 68% 63%, rgba(168, 201, 174, .75) 0 24%, transparent 24.5%),
+        rgba(255, 244, 230, .7);
+      transform: rotate(-15deg);
+      pointer-events: none;
+    }
+
+    .cover-copy { position: relative; z-index: 1; max-width: 760px; }
+    .cover h1 span { color: var(--orange); }
+    .cover .lead { max-width: 620px; margin-top: 1rem; }
+
+    .cover-tag {
+      display: inline-flex;
+      margin-bottom: 1.25rem;
+      padding: .45rem .8rem;
+      border: 1px solid rgba(233, 154, 98, .35);
+      border-radius: 999px;
+      color: #945a33;
+      background: #fff4e7;
+      font-size: .8rem;
+      font-weight: 800;
+    }
+
+    .cover-stamp {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      margin-top: 1.5rem;
+      color: var(--muted);
+      font-size: .83rem;
+      font-weight: 700;
+    }
+
+    .cover-stamp::before {
+      width: .65rem;
+      height: .65rem;
+      border-radius: 50%;
+      content: "";
+      background: var(--green);
+      box-shadow: 0 0 0 5px rgba(168, 201, 174, .18);
+    }
+
+    .closing {
+      padding: clamp(1.25rem, 3vw, 2rem);
+      border-radius: 22px;
+      background: linear-gradient(120deg, #fff4e7, #f5f4e8 60%, #eaf3eb);
+    }
+
+    .closing p { max-width: 760px; margin-bottom: 0; font-size: 1.08rem; }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 1rem;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2.5rem) 1rem;
+    }
+
+    .control-group { display: flex; align-items: center; gap: .5rem; }
+    .control-group.end { justify-content: flex-end; }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.65rem;
+      min-height: 2.5rem;
+      padding: .45rem .8rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, .88);
+      cursor: pointer;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+
+    .nav-btn:hover:not(:disabled) {
+      border-color: var(--orange);
+      background: #fff4e7;
+      transform: translateY(-1px);
+    }
+
+    .nav-btn:disabled { opacity: .42; cursor: not-allowed; }
+    .nav-btn:focus-visible, .dot:focus-visible { outline: 3px solid #ca885b; outline-offset: 3px; }
+    .nav-btn .arrow { font-size: 1.15rem; line-height: 1; }
+    .key-hint { color: var(--muted); font-size: .72rem; }
+
+    .page-count {
+      min-width: 5rem;
+      color: var(--muted);
+      font-size: .82rem;
+      font-variant-numeric: tabular-nums;
+      text-align: center;
+    }
+
+    .dots { display: flex; justify-content: center; gap: .34rem; }
+
+    .dot {
+      width: .48rem;
+      height: .48rem;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: #d7cabb;
+      cursor: pointer;
+      transition: width .18s ease, background .18s ease;
+    }
+
+    .dot[aria-current="true"] { width: 1.35rem; background: var(--orange); }
+
+    .progress-track {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 5;
+      height: 3px;
+      background: transparent;
+    }
+
+    .progress-bar {
+      width: 10%;
+      height: 100%;
+      background: var(--orange);
+      transition: width .22s ease;
+    }
+
+    @media (max-width: 760px) {
+      .topbar { padding-top: .75rem; }
+      .top-note { max-width: 11rem; font-size: .68rem; }
+      #stage { min-height: calc(100svh - 108px); padding: .35rem .65rem .6rem; }
+      .slide { min-height: calc(100svh - 132px); padding: 1.2rem; border-radius: 21px; gap: 1rem; }
+      .grid, .grid.two, .split { grid-template-columns: 1fr; }
+      .grid { gap: .65rem; }
+      .card { padding: .9rem; }
+      .card p, .card li { font-size: .88rem; }
+      .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .flow-item:not(:last-child)::after { display: none; }
+      .checklist { grid-template-columns: 1fr; gap: .5rem; }
+      .controls { grid-template-columns: auto 1fr auto; gap: .45rem; padding: 0 .75rem .65rem; }
+      .dots { gap: .22rem; }
+      .dot { width: .36rem; height: .36rem; }
+      .dot[aria-current="true"] { width: .95rem; }
+      .page-count { min-width: 3.4rem; font-size: .74rem; }
+      .key-hint { display: none; }
+      .nav-btn { min-width: 2.35rem; min-height: 2.25rem; padding: .35rem .58rem; }
+      .cover::after { right: 1%; bottom: 4%; opacity: .55; }
+    }
+
+    @media (max-width: 420px) {
+      .brand { font-size: .78rem; }
+      .brand-mark { width: 1.8rem; height: 1.8rem; }
+      .flow { grid-template-columns: 1fr 1fr; }
+      .flow-item { padding: .78rem; }
+      .flow-item span { font-size: .8rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progress"></div></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">學</span><span>師資生實習準備指南</span></div>
+    <div class="top-note">經驗與建議供參考；申請規定請向目標學校確認</div>
+  </header>
+
+  <main id="stage" aria-live="polite">
+    <section class="slide is-active" aria-labelledby="title-1">
+      <div class="slide-head">
+        <div>
+          <p class="eyebrow">First steps into the field</p>
+          <span class="cover-tag">給第一次申請的師資生</span>
+        </div>
+        <span class="step">01</span>
+      </div>
+      <div class="content cover">
+        <div class="cover-copy">
+          <h1 id="title-1">第一次申請<br><span>教育實習</span></h1>
+          <p class="lead">從尋找學校、準備資料，到面談與認識實習工作，陪你一步步把「不知道怎麼開始」變成「知道要確認什麼」。</p>
+          <div class="cover-stamp">一份新手路線圖，不是全台通用規章</div>
+        </div>
+      </div>
+      <p class="source"><strong>閱讀方式：</strong>每個來源編號都代表一則個人經驗、請益或留言建議；請勿把個案當成正式規定。</p>
+    </section>
+
+    <section class="slide" aria-labelledby="title-2">
+      <div class="slide-head">
+        <div>
+          <p class="eyebrow">01 / Explore</p>
+          <h2 id="title-2">申請前的準備</h2>
+        </div>
+        <span class="step">02</span>
+      </div>
+      <div class="content">
+        <p class="lead">先找出「適合深入了解的學校」，再思考自己的學習期待能否與學校特色對話。</p>
+        <div class="grid">
+          <article class="card">
+            <span class="card-kicker">先探索</span>
+            <h3>認識學校</h3>
+            <p>查看目標學校的校網與沿革，了解辦學風格、核心理念及特色。</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker green">再對照</span>
+            <h3>認識自己</h3>
+            <p>整理自己的教育理念、專長與想累積的經驗，想想哪些面向和學校特色相呼應。</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker orange">保留提問</span>
+            <h3>不確定就記下來</h3>
+            <p>把名額、年級、實習內容等疑問列成清單，留待向學校確認，而非先自行假設。</p>
+          </article>
+        </div>
+        <div class="callout yellow">
+          <p><strong>來源界線：</strong>「查校網、了解辦學理念」是 W003 留言者的建議，不是官方規定，也不能保證符合所有學校的甄選方式。</p>
+        </div>
+      </div>
+      <p class="source"><strong>來源：</strong>W003｜國小面試請益中的留言建議。W003 是請益文章，內容不是正式甄選標準。</p>
+    </section>
+
+    <section class="slide" aria-labelledby="title-3">
+      <div class="slide-head">
+        <div>
+          <p class="eyebrow">02 / Ask</p>
+          <h2 id="title-3">聯絡學校：主動確認什麼？</h2>
+        </div>
+        <span class="step">03</span>
+      </div>
+      <div class="content">
+        <p class="lead">把不確定的流程變成清楚的問題；聯絡學校不等於已取得實習資格。</p>
+        <div class="flow">
+          <div class="flow-item"><b>01｜是否受理</b><span>目前是否接受實習申請？是否有名額？</span></div>
+          <div class="flow-item"><b>02｜聯絡窗口</b><span>應聯絡哪個單位或承辦窗口？</span></div>
+          <div class="flow-item"><b>03｜申請資訊</b><span>時程、文件與後續面談如何確認？</span></div>
+          <div class="flow-item"><b>04｜實習安排</b><span>資格如何確認？能否表達年級偏好？</span></div>
+        </div>
+        <div class="split">
+          <div class="callout">
+            <p><strong>重要：</strong>以上是從 W005 的請益問題整理出的「待問清單」，不是已查證的流程或答案。</p>
+          </div>
+          <div class="quote">「提出申請」和「取得資格」不是同一件事。<small>請向目標學校確認完整程序與結果｜W005</small></div>
+        </div>
+      </div>
+      <p class="source"><strong>來源：</strong>W005｜半年實習申請流程請益。作者與日期未確認；原文提出疑問，沒有提供官方答案。</p>
+    </section>
+
+    <section class="slide" aria-labelledby="title-4">
+      <div class="slide-head">
+        <div>
+          <p class="eyebrow">03 / Prepare</p>
+          <h2 id="title-4">申請文件：整理你的故事</h2>
+        </div>
+        <span class="step">04</span>
+      </div>
+      <div class="content">
+        <p class="lead">先依校方要求準備，再用文件呈現「我學過什麼、關心什麼、能帶來什麼」。</p>
+        <div class="grid">
+          <article class="card">
+            <span class="label experience">個人經驗｜W001</span>
+            <h3>一個國小個案</h3>
+            <ul>
+              <li>個人履歷</li>
+              <li>簡短自傳</li>
+              <li>成績單</li>
+            </ul>
+            <p style="margin-top:.7rem">這是 2018 年單一面試經驗，不是通用文件清單。</p>
+          </article>
+          <article class="card">
+            <span class="label inquiry">留言建議｜W003</span>
+            <h3>可思考呈現的內容</h3>
+            <ul>
+              <li>學經歷與個人專長</li>
+              <li>教育理念</li>
+              <li>與學校特色的連結</li>
+            </ul>
+            <p style="margin-top:.7rem">屬留言者的準備建議，非校方格式。</p>
+          </article>
+          <article class="card">
+            <span class="label inquiry">尚無定論｜W004</span>
+            <h3>補充資料要不要重複？</h3>
+            <p>高中請益者詢問額外履歷如何補充已填的申請表；該資料沒有提供確定答案。</p>
+          </article>
+        </div>
+        <div class="callout green">
+          <p><strong>新手做法：</strong>對照校方表單，整理能補充呈現經驗與理念的資料；格式、份數與是否需成績單，先問學校。</p>
+        </div>
+      </div>
+      <p class="source"><strong>來源類型：</strong>W001 個人國小面試經驗；W003 留言建議；W004 高中履歷請益。無統一履歷格式或文件規定可供確認。</p>
+    </section>
+
+    <section class="slide" aria-labelledby="title-5">
+      <div class="slide-head">
+        <div>
+          <p class="eyebrow">04 / Rehearse</p>
+          <h2 id="title-5">面試準備：把選擇說清楚</h2>
+        </div>
+        <span class="step">05</span>
+      </div>
+      <div class="content">
+        <p class="lead">準備的重點不是背標準答案，而是能說明「為什麼想去、想學什麼、如何理解教育」。</p>
+        <div class="split">
+          <article class="card">
+            <span class="label inquiry">留言建議｜W003</span>
+            <h3>先做學校功課</h3>
+            <ul>
+              <li>了解學校辦學風格與核心理念。</li>
+              <li>思考自己的教育理念、專長如何連結。</li>
+              <li>準備具體說明申請動機。</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="label experience">個人面試經驗｜W001</span>
+            <h3>可用來練習的題材</h3>
+            <ul>
+              <li>你的教學理念是什麼？</li>
+              <li>如何與兒童有效溝通？</li>
+              <li>為什麼申請這所學校？</li>
+            </ul>
+            <p style="margin-top:.7rem">這些是單一國小個案提到的問題，不是通用題庫。</p>
+          </article>
+        </div>
+        <div class="quote">練習用自己的經驗回答，而不是猜測「面試官想聽什麼」。<small>W003 的提問沒有附校方題庫或篩選標準。</small></div>
+      </div>
+      <p class="source"><strong>來源：</strong>W001｜2018 年國小個人面試經驗；W003｜國小面試請益及留言建議。兩者皆非現行官方標準。</p>
+    </section>
+
+    <section class="slide" aria-labelledby="title-6">
+      <div class="slide-head">
+        <div>
+          <p class="eyebrow">05 / Show up</p>
+          <h2 id="title-6">面試禮儀：服裝與場合準備</h2>
+        </div>
+        <span class="step">06</span>
+      </div>
+      <div class="content">
+        <p class="lead">以場合合宜為思考起點；服裝留言是參考，不是校方規定。</p>
+        <div class="grid two">
+          <article class="card">
+            <span class="label inquiry">請益與留言｜W007</span>
+            <h3>乾淨、合宜、適度正式</h3>
+            <p>高中面試服裝請益的留言提到，可考慮半正式穿著，不一定要非常正式的套裝；仍須看面試場合與學校通知。</p>
+          </article>
+          <article class="card">
+            <span class="label">先看通知</span>
+            <h3>有特別要求就以通知為準</h3>
+            <p>W007 是高中面試服裝請益與少量留言，不是服裝規章，也不是面試結果分享。</p>
+          </article>
+        </div>
+        <div class="callout yellow">
+          <p><strong>學段提醒：</strong>W002 的方便活動、舒適衣著建議是幼兒園實習工作的情境，不可直接當作高中或中學面試服裝建議。</p>
+        </div>
+      </div>
+      <p class="source"><strong>來源：</strong>W007｜高中面試服裝請益及留言建議；W002｜幼兒園實習前個人準備建議（不同情境）。</p>
+    </section>
+
+    <section class="slide" aria-labelledby="title-7">
+      <div class="slide-head">
+        <div>
+          <p class="eyebrow">06 / Learn by doing</p>
+          <h2 id="title-7">實習工作：三個面向</h2>
+        </div>
+        <span class="step">07</span>
+      </div>
+      <div class="content">
+        <p class="lead">W008 的個人分享提供工作面向的例子；實際安排會因學校而異。</p>
+        <div class="grid">
+          <article class="card">
+            <span class="card-kicker green">觀察與互動</span>
+            <h3>輔導實習</h3>
+            <p>觀察班級經營、師生互動與教師面對學生狀況的方式，留下紀錄作為反思素材。</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">設計與實作</span>
+            <h3>教學實習</h3>
+            <p>觀摩教學、練習板書與教學設計、準備試教，並在教學後整理問題與收穫。</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker orange">認識校務</span>
+            <h3>行政實習</h3>
+            <p>透過行政處室工作與學校活動，了解學校運作與行政分工。</p>
+          </article>
+        </div>
+        <div class="callout green">
+          <p><strong>工作態度提醒｜W006：</strong>了解自己的工作範圍、與輔導教師溝通、逐步爭取教學練習並維持適當界線，都是作者的經驗與建議。文中「約第三個月」不是標準時程。</p>
+        </div>
+      </div>
+      <p class="source"><strong>來源：</strong>W008｜半年實習工作經驗與建議；W006｜半年實習個人經驗與建議。非各校統一安排。</p>
+    </section>
+
+    <section class="slide" aria-labelledby="title-8">
+      <div class="slide-head">
+        <div>
+          <p class="eyebrow">07 / Ask with purpose</p>
+          <h2 id="title-8">面試反問：了解實習安排</h2>
+        </div>
+        <span class="step">08</span>
+      </div>
+      <div class="content">
+        <div class="callout yellow">
+          <p><strong>延伸應用｜依 W008 的工作面向整理：</strong>以下問題不是 W008 原文中的親身經歷，也不代表學校一定提供這些安排。</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="card-kicker green">輔導</span>
+            <h3>了解陪伴與觀察</h3>
+            <p>「學校如何安排輔導教師？實習教師是否有機會觀察班級經營？」</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">教學</span>
+            <h3>了解實作與回饋</h3>
+            <p>「如何安排觀課、試教及教學回饋？是否有實際授課的機會？」</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker orange">行政與支持</span>
+            <h3>了解校務參與</h3>
+            <p>「實習教師如何接觸行政工作？是否有定期回饋或交流機會？」</p>
+          </article>
+        </div>
+        <p class="lead">選擇自己真正想了解的問題，並依面談情境調整；答案仍以學校實際說明為準。</p>
+      </div>
+      <p class="source"><strong>來源：</strong>W008｜面試反問屬整理後的延伸應用，並非原作者直接提出的面試問題或各校既定安排。</p>
+    </section>
+
+    <section class="slide" aria-labelledby="title-9">
+      <div class="slide-head">
+        <div>
+          <p class="eyebrow">08 / Your checklist</p>
+          <h2 id="title-9">新手準備檢查清單</h2>
+        </div>
+        <span class="step">09</span>
+      </div>
+      <div class="content">
+        <p class="lead">把焦慮拆成可執行的小步驟；這是學習整理清單，不是官方申請表。</p>
+        <ul class="checklist">
+          <li><span class="check" aria-hidden="true"></span><span>我已初步了解目標學校的特色與理念。<br><small>W003｜留言建議</small></span></li>
+          <li><span class="check" aria-hidden="true"></span><span>我已確認申請窗口、時程、名額與所需文件。<br><small>W005｜待向校方確認</small></span></li>
+          <li><span class="check" aria-hidden="true"></span><span>我已整理履歷、自傳、教育理念及可補充的經驗。<br><small>W001、W003；格式依校方要求</small></span></li>
+          <li><span class="check" aria-hidden="true"></span><span>我能說明申請動機，也練習過可能的面試題材。<br><small>W001 個案、W003 建議</small></span></li>
+          <li><span class="check" aria-hidden="true"></span><span>我已依面試場合與學校通知準備服裝。<br><small>W007 留言建議</small></span></li>
+          <li><span class="check" aria-hidden="true"></span><span>我準備了想了解輔導、教學或行政安排的問題。<br><small>W008｜延伸應用</small></span></li>
+        </ul>
+        <div class="callout">
+          <p><strong>最後確認：</strong>各校流程、名額、資格與文件要求均不能由這些個人經驗代替，請以目標學校的正式說明為準。</p>
+        </div>
+      </div>
+      <p class="source"><strong>本頁整合：</strong>W001、W003、W005、W007，以及依 W008 實習工作面向整理的延伸問題。</p>
+    </section>
+
+    <section class="slide" aria-labelledby="title-10">
+      <div class="slide-head">
+        <div>
+          <p class="eyebrow">A thoughtful beginning</p>
+          <h2 id="title-10">帶著準備與期待，走進教育現場</h2>
+        </div>
+        <span class="step">10</span>
+      </div>
+      <div class="content">
+        <div class="closing">
+          <p>第一次申請不必先知道所有答案。先認識學校、整理自己的想法，再把未知的部分帶著問題向校方確認。準備，是為了更有方向地學習；實習，也是一段持續觀察、嘗試與反思的旅程。</p>
+        </div>
+        <div class="grid two">
+          <article class="card">
+            <span class="card-kicker">記得查證</span>
+            <h3>個案不等於規則</h3>
+            <p>本指南引用的經驗、請益與留言都不是各校通用規定；申請資訊請以目標學校說明為準。</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker green">祝你順利</span>
+            <h3>帶著好奇，也帶著界線</h3>
+            <p>觀察、提問、嘗試與反思，逐步找到自己的教育實踐方式。</p>
+          </article>
+        </div>
+      </div>
+      <p class="source"><strong>知識來源：</strong>W001–W008（各頁皆標示資料類型與適用限制）；本簡報未採用或宣稱有官方流程資料。</p>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="投影片導覽">
+    <div class="control-group">
+      <button class="nav-btn" id="prev" type="button" aria-label="上一頁" title="上一頁（←）"><span class="arrow" aria-hidden="true">←</span></button>
+      <span class="key-hint">← → 切換</span>
+    </div>
+    <div>
+      <div class="dots" id="dots" aria-label="選擇投影片"></div>
+      <div class="page-count" id="page-count" aria-live="polite">1 / 10</div>
+    </div>
+    <div class="control-group end">
+      <button class="nav-btn" id="next" type="button" aria-label="下一頁" title="下一頁（→）"><span class="arrow" aria-hidden="true">→</span></button>
+    </div>
+  </nav>
+
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll(".slide"));
+      const dotsHost = document.getElementById("dots");
+      const counter = document.getElementById("page-count");
+      const progress = document.getElementById("progress");
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+      let current = 0;
+
+      slides.forEach(function (_, index) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "dot";
+        dot.setAttribute("aria-label", "前往第 " + (index + 1) + " 頁");
+        dot.addEventListener("click", function () { show(index); });
+        dotsHost.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsHost.querySelectorAll(".dot"));
+
+      function show(index) {
+        current = Math.max(0, Math.min(index, slides.length - 1));
+        slides.forEach(function (slide, i) {
+          const active = i === current;
+          slide.classList.toggle("is-active", active);
+          slide.setAttribute("aria-hidden", String(!active));
+        });
+        dots.forEach(function (dot, i) {
+          if (i === current) {
+            dot.setAttribute("aria-current", "true");
+          } else {
+            dot.removeAttribute("aria-current");
+          }
+        });
+        counter.textContent = (current + 1) + " / " + slides.length;
+        progress.style.width = ((current + 1) / slides.length * 100) + "%";
+        prev.disabled = current === 0;
+        next.disabled = current === slides.length - 1;
+        document.title = (current + 1) + "/" + slides.length + "｜第一次申請教育實習：新手準備指南";
+      }
+
+      prev.addEventListener("click", function () { show(current - 1); });
+      next.addEventListener("click", function () { show(current + 1); });
+      document.addEventListener("keydown", function (event) {
+        if (event.altKey || event.ctrlKey || event.metaKey) return;
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          show(current + 1);
+        } else if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          show(current - 1);
+        } else if (event.key === "Home") {
+          show(0);
+        } else if (event.key === "End") {
+          show(slides.length - 1);
+        }
+      });
+
+      show(0);
+    }());
+  </script>
+</body>
+</html>
